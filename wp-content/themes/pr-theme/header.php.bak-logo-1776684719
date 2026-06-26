@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<header class="site-header" id="site-header">
+    <div class="site-header__inner">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
+            <span class="site-logo__icon"><?php echo pr_icon( 'eye' ); ?></span>
+            <span class="site-logo__text">Psychic Reader</span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="<?php esc_attr_e( 'Primary Navigation', 'pr-theme' ); ?>">
+            <?php
+            if ( has_nav_menu( 'primary' ) ) {
+                wp_nav_menu( [
+                    'theme_location' => 'primary',
+                    'container'      => false,
+                    'menu_class'     => 'main-nav__list',
+                    'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+                    'depth'          => 1,
+                ] );
+            } else {
+                pr_fallback_menu();
+            }
+            ?>
+        </nav>
+
+        <div class="header-cta">
+            <a href="<?php echo esc_url( home_url( '/get-reading/' ) ); ?>" class="btn btn--primary btn--sm">Get a Reading</a>
+            <button class="menu-toggle" id="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle Menu', 'pr-theme' ); ?>">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="main-content">

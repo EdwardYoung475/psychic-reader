@@ -1,0 +1,47 @@
+</main><!-- #main-content -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer__brand">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo" style="margin-bottom:1.5rem;display:inline-flex;">
+                    <span class="site-logo__icon" style="color:var(--color-secondary);"><?php echo pr_icon( 'eye' ); ?></span>
+                    <span class="site-logo__text" style="color:#fff;">Psychic Reader</span>
+                </a>
+                <p class="footer__brand-text">Connecting you with trusted psychic readers for personalized guidance on love, career, and life path.</p>
+            </div>
+            <div>
+                <h4 class="footer__heading">Readings</h4>
+                <ul class="footer__links">
+                    <li><a href="<?php echo esc_url( home_url( '/get-reading/' ) ); ?>">Get a Reading</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/our-readers/' ) ); ?>">Our Readers</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/reading-types/' ) ); ?>">Reading Types</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About Us</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy Policy</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/terms-of-service/' ) ); ?>">Terms of Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/disclaimer/' ) ); ?>">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-bottom__copy">&copy; <?php echo esc_html( date( 'Y' ) ); ?> Psychic Reader. All rights reserved.</p>
+            <p class="footer-bottom__copy">For entertainment purposes only.</p>
+        </div>
+    </div>
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>
