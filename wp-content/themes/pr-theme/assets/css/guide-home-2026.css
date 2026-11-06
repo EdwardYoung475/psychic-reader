@@ -16,3 +16,8 @@
 .page-header .badge--gold{color:#76591d}
 .cta-section .cta-section__title{color:#fff!important}
 .cta-section .btn--secondary{color:#153f35}
+.hpx-figure{margin:0 auto;max-width:960px}
+.hpx-figure img{display:block;width:100%;height:auto;border-radius:16px}
+.hpx-figwrap{padding:1.5rem 1.25rem}
+.hpx-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.25rem;max-width:1100px;margin:0 auto}
+.pr26-section--fig{padding:1rem 0}
